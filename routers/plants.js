@@ -13,10 +13,10 @@ router.get("/", (req, res) => {
 
     let result = plants;
 
-    if(usiFilter !== undefined){
+    if (usiFilter !== undefined) {
 
         result = plants.filter((plant) => plant.usiComuni.includes(usiFilter))
-    }   
+    }
 
     res.json({
         data: result,
@@ -33,7 +33,7 @@ router.get("/:id", (req, res) => {
     const plantId = req.params.id;
     const plant = plants.find((plant) => plant.id === plantId);
 
-    if(plant === undefined){
+    if (plant === undefined) {
         res.status(404);
         return res.json({
             error: "Pianta non trovata"
@@ -46,8 +46,8 @@ router.get("/:id", (req, res) => {
         "nomeScientifico": plant.nomeScientifico,
         "immagine": plant.immagine,
         "proprietaPrincipali": plant.proprietaPrincipali,
-        "usicomuni" : plant.usiComuni,
-        
+        "usicomuni": plant.usiComuni,
+
     })
 })
 
@@ -76,12 +76,18 @@ router.put("/:id", (req, res) => {
 router.delete("/:id", (req, res) => {
 
     const plantId = req.params.id;
-    const plant = plants.find((plant) => plant.id === plantId);
+    const index = plants.findIndex((plant) => plant.id === plantId);
 
-    res.json({
+    if (index === -1) {
+        res.status(404);
+        return res.json({
+            error: "Pianta non trovata"
+        })
+    };
 
-        data: `Elmino la ricetta ${plant.titolo} con id ${plant.id}`,
-    })
+    plants.splice(index, 1);
+
+    res.sendStatus(204);
 
 })
 
