@@ -1,5 +1,6 @@
 import express from "express"
 import plants from "../data/data.js";
+import { error } from "console";
 
 
 const router = express.Router();
@@ -15,8 +16,7 @@ router.get("/", (req, res) => {
     if(usiFilter !== undefined){
 
         result = plants.filter((plant) => plant.usiComuni.includes(usiFilter))
-    }
-    
+    }   
 
     res.json({
         data: result,
@@ -31,7 +31,14 @@ router.get("/", (req, res) => {
 router.get("/:id", (req, res) => {
 
     const plantId = req.params.id;
-    const plant = plants.find((plant) => plant.id === plantId)
+    const plant = plants.find((plant) => plant.id === plantId);
+
+    if(plant === undefined){
+        res.status(404);
+        return res.json({
+            error: "Pianta non trovata"
+        })
+    }
 
     res.json({
         "id": plantId,
