@@ -15,7 +15,7 @@ const plants = [
       "Crampi mestruali e intestinali",
       "Irritazioni cutanee e congiuntiviti"
     ],
-    "immagineURL": "images/camomilla.jpg"
+    "immagine": "images/camomilla.jpg"
   },
   {
     "id": "1",
@@ -33,7 +33,7 @@ const plants = [
       "Sindrome dell'intestino irritabile",
       "Raffreddore e congestione nasale"
     ],
-    "immagineURL": "images/mentapiperitaa.jpg"
+    "immagine": "images/mentapiperitaa.jpg"
   },
   {
     "id": "2",
@@ -51,7 +51,7 @@ const plants = [
       "Ferite e abrasioni",
       "Stipsi (succo)"
     ],
-    "immagineURL": "images/aloevera.webp"
+    "immagine": "images/aloevera.webp"
   },
   {
     "id": "3",
@@ -69,7 +69,7 @@ const plants = [
       "Pelle secca e screpolata",
       "Dermatite da pannolino"
     ],
-    "immagineURL": "images/calendula.jpg"
+    "immagine": "images/calendula.jpg"
   },
   {
     "id": "4",
@@ -87,7 +87,7 @@ const plants = [
       "Mal di testa",
       "Punture d'insetto e piccole ustioni"
     ],
-    "immagineURL": "images/lavanda.webp"
+    "immagine": "images/lavanda.webp"
   },
   {
     "id": "5",
@@ -104,7 +104,7 @@ const plants = [
       "Infezioni delle vie respiratorie",
       "Supporto immunitario"
     ],
-    "immagineURL": "images/echinacea.jpeg"
+    "immagine": "images/echinacea.jpeg"
   },
   {
     "id": "6",
@@ -121,7 +121,7 @@ const plants = [
       "Tosse e raffreddore",
       "Tensione nervosa e palpitazioni"
     ],
-    "immagineURL": "images/tiglio.jpg"
+    "immagine": "images/tiglio.jpg"
   },
   {
     "id": "7",
@@ -139,7 +139,7 @@ const plants = [
       "Insonnia (legata a stati ansiosi)",
       "Ferite e ustioni (uso topico)"
     ],
-    "immagineURL": "images/iperico.avif"
+    "immagine": "images/iperico.avif"
   },
   {
     "id": "8",
@@ -157,7 +157,7 @@ const plants = [
       "Stati di agitazione",
       "Crampi e spasmi"
     ],
-    "immagineURL": "images/valeriana.jpg"
+    "immagine": "images/valeriana.jpg"
   },
   {
     "id": "9",
@@ -175,7 +175,7 @@ const plants = [
       "Dolori muscolari e articolari",
       "Raffreddore e gola irritata"
     ],
-    "immagineURL": "images/zenzero.jpeg"
+    "immagine": "images/zenzero.jpeg"
   }
 ]
 
