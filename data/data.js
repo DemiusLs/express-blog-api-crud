@@ -1,5 +1,6 @@
-plants = [
+const plants = [
   {
+    "id": "0",
     "nomeComune": "Camomilla",
     "nomeScientifico": "Matricaria chamomilla",
     "proprietaPrincipali": [
@@ -14,9 +15,10 @@ plants = [
       "Crampi mestruali e intestinali",
       "Irritazioni cutanee e congiuntiviti"
     ],
-    "immagineURL": "http://googleusercontent.com/image_generation_content/0"
+    "immagineURL": "images/camomilla.jpg"
   },
   {
+    "id": "1",
     "nomeComune": "Menta Piperita",
     "nomeScientifico": "Mentha x piperita",
     "proprietaPrincipali": [
@@ -31,9 +33,10 @@ plants = [
       "Sindrome dell'intestino irritabile",
       "Raffreddore e congestione nasale"
     ],
-    "immagineURL": "http://googleusercontent.com/image_generation_content/33"
+    "immagineURL": "images/mentapiperitaa.jpg"
   },
   {
+    "id": "2",
     "nomeComune": "Aloe Vera",
     "nomeScientifico": "Aloe barbadensis miller",
     "proprietaPrincipali": [
@@ -48,9 +51,10 @@ plants = [
       "Ferite e abrasioni",
       "Stipsi (succo)"
     ],
-    "immagineURL": "http://googleusercontent.com/image_generation_content/30"
+    "immagineURL": "images/aloevera.webp"
   },
   {
+    "id": "3",
     "nomeComune": "Calendula",
     "nomeScientifico": "Calendula officinalis",
     "proprietaPrincipali": [
@@ -65,9 +69,10 @@ plants = [
       "Pelle secca e screpolata",
       "Dermatite da pannolino"
     ],
-    "immagineURL": "http://googleusercontent.com/image_generation_content/29"
+    "immagineURL": "images/calendula.jpg"
   },
   {
+    "id": "4",
     "nomeComune": "Lavanda",
     "nomeScientifico": "Lavandula angustifolia",
     "proprietaPrincipali": [
@@ -82,9 +87,10 @@ plants = [
       "Mal di testa",
       "Punture d'insetto e piccole ustioni"
     ],
-    "immagineURL": "http://googleusercontent.com/image_generation_content/28"
+    "immagineURL": "images/lavanda.webp"
   },
   {
+    "id": "5",
     "nomeComune": "Echinacea",
     "nomeScientifico": "Echinacea purpurea",
     "proprietaPrincipali": [
@@ -98,9 +104,10 @@ plants = [
       "Infezioni delle vie respiratorie",
       "Supporto immunitario"
     ],
-    "immagineURL": "http://googleusercontent.com/image_generation_content/31"
+    "immagineURL": "images/echinacea.jpeg"
   },
   {
+    "id": "6",
     "nomeComune": "Tiglio",
     "nomeScientifico": "Tilia cordata / platyphyllos",
     "proprietaPrincipali": [
@@ -114,9 +121,10 @@ plants = [
       "Tosse e raffreddore",
       "Tensione nervosa e palpitazioni"
     ],
-    "immagineURL": "http://googleusercontent.com/image_generation_content/32"
+    "immagineURL": "images/tiglio.jpg"
   },
   {
+    "id": "7",
     "nomeComune": "Iperico",
     "nomeScientifico": "Hypericum perforatum",
     "proprietaPrincipali": [
@@ -131,9 +139,10 @@ plants = [
       "Insonnia (legata a stati ansiosi)",
       "Ferite e ustioni (uso topico)"
     ],
-    "immagineURL": "http://googleusercontent.com/image_generation_content/34"
+    "immagineURL": "images/iperico.avif"
   },
   {
+    "id": "8",
     "nomeComune": "Valeriana",
     "nomeScientifico": "Valeriana officinalis",
     "proprietaPrincipali": [
@@ -148,9 +157,10 @@ plants = [
       "Stati di agitazione",
       "Crampi e spasmi"
     ],
-    "immagineURL": "http://googleusercontent.com/image_generation_content/35"
+    "immagineURL": "images/valeriana.jpg"
   },
   {
+    "id": "9",
     "nomeComune": "Zenzero",
     "nomeScientifico": "Zingiber officinale",
     "proprietaPrincipali": [
@@ -165,7 +175,7 @@ plants = [
       "Dolori muscolari e articolari",
       "Raffreddore e gola irritata"
     ],
-    "immagineURL": "http://googleusercontent.com/image_generation_content/36"
+    "immagineURL": "images/zenzero.jpeg"
   }
 ]
 
