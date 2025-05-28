@@ -4,13 +4,22 @@ import plants from "../data/data.js";
 
 const index = (req, res) => {
 
-    const usiFilter = req.query.usiComuni;
+    // const usiFilter = req.query.usiComuni;
+    // const propFilter = req.query.proprietaPrincipali;
 
-    let result = plants;
+    const { usiComuni, proprietaPrincipali } = req.query
 
-    if (usiFilter !== undefined) {
 
-        result = plants.filter((plant) => plant.usiComuni.includes(usiFilter))
+    let result = [...plants];
+
+    if (usiComuni !== undefined) {
+
+        result = result.filter((plant) => plant.usiComuni.includes(usiComuni))
+    }
+
+    if (proprietaPrincipali !== undefined) {
+
+        result = result.filter((plant) => plant.proprietaPrincipali.includes(proprietaPrincipali))
     }
 
     res.json({
@@ -43,18 +52,36 @@ const show = (req, res) => {
 }
 
 const store = (req, res) => {
-    res.send("Aggiungo una nuova ricetta")
+
+    const newPlant = req.body;
+    const lastId = parseInt(plants[plants.length - 1].id);
+    newPlant.id = (lastId + 1).toString();
+    plants.push(newPlant);
+
+    res.status(201)
+    res.send({
+        data: newPlant,
+    })
 
 }
 
 const update = (req, res) => {
 
+    const updatedPlant = req.body;
     const plantId = req.params.id;
     const plant = plants.find((plant) => plant.id === plantId);
 
+    plant.nomeComune = updatedPlant.nomeComune;
+    plant.nomeScientifico = updatedPlant.nomeScientifico,
+    plant.immagine =  updatedPlant.immagine,
+    plant.proprietaPrincipali = updatedPlant.proprietaPrincipali,
+    plant.usiComuni = updatedPlant.usiComuni,
+
+
+
     res.json({
 
-        data: `Modifico la pianta ${plant.nomeComune} con id ${plant.id}`,
+        data: plant,
     })
 
 }
