@@ -1,6 +1,7 @@
 import express from "express"
 import plantController from "../controllers/plantController.js";
 import checkPlantExistsMiddleware from "../middleweres/checkPlantExistsMiddleware.js";
+import plantAlreayExists from "../middleweres/plantAlreadyExists.js";
 
 
 
@@ -18,7 +19,7 @@ router.get("/:id", checkPlantExistsMiddleware, plantController.show)
 
 //STORE
 //inserisco un nuovo elemento
-router.post('/', plantController.store)
+router.post('/',plantAlreayExists, plantController.store)
 
 
 //UPDATE
