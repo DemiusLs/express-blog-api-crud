@@ -1,9 +1,9 @@
-function routeNotFound ( req, res , next ){
+function routeNotFound(req, res, next) {
 
     res.status(404),
-    res.json({
-        error : "Not found"
-    });
+        res.json({
+            error: "Not found"
+        });
 }
 
 export default routeNotFound;

@@ -1,6 +1,7 @@
 import express from "express"
 import plantsRouter from "./routers/plants.js"
 import routeNotFound from "./middleweres/routeNotFound.js"
+import errorHandler from "./middleweres/errorHandler.js"
 
 const app = express()
 const port = 3000
@@ -19,10 +20,11 @@ app.get('/', (req, res) => {
 })
 
 // Utilizzo il plantsRouter per gestire le richieste a plants
-app.use("/plants" , plantsRouter);
+app.use("/plants", plantsRouter);
 
 
 app.use(routeNotFound);
+app.use(errorHandler);
 
 app.listen(port, () => {
 
