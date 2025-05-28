@@ -1,6 +1,6 @@
 import plants from "../data/data.js";
 
-function checkPlantExistsMiddleware (req , res , event){
+function checkPlantExistsMiddleware(req, res, next) {
 
     const plantId = req.params.id;
 
@@ -8,20 +8,21 @@ function checkPlantExistsMiddleware (req , res , event){
 
     // Se l'indice è -1 
 
-    if(index === -1){
+    if (index === -1) {
 
         // Ritorno errore e mi fermo
         res.status(404);
         res.json({
-            error : "Pianta non trovata"
+            error: "Pianta non trovata"
         })
 
-    }else{
+    } else {
         // salvo l'indice come nuova chiave di req
         req.plantIndex = index;
+        next();
     }
 
-    next();
+
 }
 
 export default checkPlantExistsMiddleware; 

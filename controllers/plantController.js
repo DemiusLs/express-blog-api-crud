@@ -30,23 +30,20 @@ const index = (req, res) => {
 
 const show = (req, res) => {
 
-    const plantId = req.params.id;
-    const plant = plants.find((plant) => plant.id === plantId);
+    // const plantId = req.params.id;
+    // const plant = plants.find((plant) => plant.id === plantId);
 
-    if (plant === undefined) {
-        res.status(404);
-        return res.json({
-            error: "Pianta non trovata"
-        })
-    }
+    // if (plant === undefined) {
+    //     res.status(404);
+    //     return res.json({
+    //         error: "Pianta non trovata"
+    //     })
+    // }
+
+    const plant = plants[req.plantIndex];
 
     res.json({
-        "id": plantId,
-        "nomeComune": plant.nomeComune,
-        "nomeScientifico": plant.nomeScientifico,
-        "immagine": plant.immagine,
-        "proprietaPrincipali": plant.proprietaPrincipali,
-        "usicomuni": plant.usiComuni,
+        data: plant
 
     })
 }
@@ -68,37 +65,37 @@ const store = (req, res) => {
 const update = (req, res) => {
 
     const updatedPlant = req.body;
-    const plantId = req.params.id;
-    const plant = plants.find((plant) => plant.id === plantId);
+
+    const plant = plants[req.plantIndex]
 
     plant.nomeComune = updatedPlant.nomeComune;
     plant.nomeScientifico = updatedPlant.nomeScientifico,
-    plant.immagine =  updatedPlant.immagine,
-    plant.proprietaPrincipali = updatedPlant.proprietaPrincipali,
-    plant.usiComuni = updatedPlant.usiComuni,
+        plant.immagine = updatedPlant.immagine,
+        plant.proprietaPrincipali = updatedPlant.proprietaPrincipali,
+        plant.usiComuni = updatedPlant.usiComuni,
 
 
 
-    res.json({
+        res.json({
 
-        data: plant,
-    })
+            data: plant,
+        })
 
 }
 
 const destroy = (req, res) => {
 
-    const plantId = req.params.id;
-    const index = plants.findIndex((plant) => plant.id === plantId);
+    // const plantId = req.params.id;
+    // const index = plants.findIndex((plant) => plant.id === plantId);
 
-    if (index === -1) {
-        res.status(404);
-        return res.json({
-            error: "Pianta non trovata"
-        })
-    };
+    // if (index === -1) {
+    //     res.status(404);
+    //     return res.json({
+    //         error: "Pianta non trovata"
+    //     })
+    // };
 
-    plants.splice(index, 1);
+    plants.splice(req.plantIndex, 1);
 
     res.sendStatus(204);
 
